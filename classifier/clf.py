@@ -637,7 +637,7 @@ class SignatureAttnNet:
                 (1, 1),
                 kernel_initializer="random_normal",
             )(gen)
-            out = tf.keras.layers.ReLU()(out)
+            out = tf.keras.layers.LeakyReLU(alpha=0.2)(out)
 
             # define model
             model = tf.keras.Model(in_lat, out)
