@@ -343,7 +343,7 @@ class FNETBlock(tf.keras.layers.Layer):
             dtype=tf.dtypes.float16,
         )
 
-        x - x + inputs
+        x = x + inputs
 
         x = self.N1(x)
 
